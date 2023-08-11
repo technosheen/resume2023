@@ -11,13 +11,11 @@ const last_posts = posts.slice(0, 3);
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-5xl font-bold">I'm Sean Mahoney</div>
+    <div class="text-3xl py-3 font-bold">Software Developer and UI/UX Designer</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        With almost 7 years of experience in Software development, I design, architect, develop, and maintain web applications using Adobe Experience Manager, Hubspot CMS, Salesforce, and Wordpress. In addition to my strong understanding of programming languages like HTML, CSS, JavaScript, HubL, and PHP; I have experience working with APIs, and databases such as MySQL, PostgreSQL, and MongoDB. In order to deliver successful projects on time and on budget, I work closely with cross-functional teams to ensure everybody is included and informed throughout the development process.
       </text>
     </div>
     <div class="mt-8">
@@ -29,7 +27,7 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">My latest projects {"</>"}</div>
   </div>
 
   <HorizontalCard
@@ -54,24 +52,4 @@ const last_posts = posts.slice(0, 3);
     url="#"
     badge="FOSS"
   />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + post.slug}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
 </BaseLayout>
